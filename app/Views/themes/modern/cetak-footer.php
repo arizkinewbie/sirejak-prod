@@ -52,7 +52,9 @@ $urutanAkreditasi = ['unggul', 'a', 'baik sekali', 'b', 'baik', 'c', 'baik\'', '
     </div>
     <footer>
         <p>
-            <i> Dikeluarkan pada tanggal <?= format_tanggal(date('Y-m-d H:i:s')) ?> WIB<br> oleh Sistem Rekam Jejak Perguruan Tinggi (<?= $_ENV['Author'] ?>)</i><br />
+            <i> Dicetak pada tanggal <?= format_tanggal(date('Y-m-d H:i:s')) ?> WIB<br />
+                Berdasarkan data PDDIKTI tanggal <?= format_tanggal($dataPT['tgl_input']) ?><br />
+                Oleh Sistem Rekam Jejak Perguruan Tinggi (<?= $_ENV['Author'] ?>)</i><br />
         </p>
     </footer>
 </body>
