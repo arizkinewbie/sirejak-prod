@@ -41,10 +41,10 @@ class Upload_data extends BaseController
 
 		if ($_FILES['file_excel_perguruan']['name']) {
 			$file_type = $_FILES['file_excel_perguruan']['type'];
-			$allowed = ['.xlsx'];
+			$allowed = ['application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'];
 
 			if (!in_array($file_type, $allowed)) {
-				$form_errors['file_excel_perguruan'] = 'Tipe file harus ' . join(', ', $allowed);
+				$form_errors['file_excel_perguruan'] = 'Tipe file harus .xlsx';
 			}
 		} else {
 			$form_errors['file_excel_perguruan'] = 'File excel PT belum dipilih';
@@ -52,10 +52,10 @@ class Upload_data extends BaseController
 
 		if ($_FILES['file_excel_prodi']['name']) {
 			$file_type = $_FILES['file_excel_prodi']['type'];
-			$allowed = ['.xlsx'];
+			$allowed = ['application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'];
 
 			if (!in_array($file_type, $allowed)) {
-				$form_errors['file_excel_prodi'] = 'Tipe file harus ' . join(', ', $allowed);
+				$form_errors['file_excel_prodi'] = 'Tipe file harus .xlsx';
 			}
 		} else {
 			$form_errors['file_excel_prodi'] = 'File excel Prodi belum dipilih';
