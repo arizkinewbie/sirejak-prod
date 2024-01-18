@@ -14,7 +14,7 @@
         <label class="col-sm-3 col-md-2 col-lg-2 col-form-label">Pilih Tanggal Data PDDIKTI</label>
         <div class="col-sm-5">
           <div class="input-group">
-            <select class="selectpicker form-control" id="date" name="date">
+            <select class="selectpicker form-control" title="Pilih Salah Satu" data-live-search="true" id="date" name="date">
               <?php foreach ($tglInput as $tgl_input) : ?>
                 <?php
                 $tgl_input_value = $tgl_input['tgl_input'];
@@ -79,11 +79,46 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", function() {
+    var currentUrl = window.location.href;
+    var baseUrl = '<?= base_url(); ?>/cetak';
+
+    // Cek apakah URL saat ini sama dengan baseUrl dan tidak memiliki parameter tambahan
+    if (currentUrl === baseUrl || currentUrl === baseUrl + '/') {
+      document.getElementById("myForm").style.display = 'none';
+      Swal.fire({
+        title: 'Konfirmasi',
+        text: "Apakah badan penyelenggara telah terdata?",
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Ya, Terdata',
+        cancelButtonText: 'Belum'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          document.getElementById("myForm").style.display = 'block';
+        } else {
+          Swal.fire({
+            title: 'Coming Soon',
+            text: 'Fitur ini akan segera hadir!',
+            icon: 'info',
+            willClose: () => {
+              window.location.href = '<?= base_url(); ?>/dashboard';
+            }
+          });
+        }
+      });
+    } else {
+      document.getElementById("myForm").style.display = 'block';
+    }
+
     const selectedValuesInput = document.getElementById("selectedValues");
     const ptNames = <?= json_encode($ptNames); ?>;
     const ptNamesValues = ptNames.map(pt => pt.nama_pt);
     selectedValuesInput.value = ptNamesValues.join(",");
   });
+
+
 
   document.getElementById("myForm").addEventListener("submit", function(event) {
     var selectedYayasan = document.getElementById("yayasanSelect");

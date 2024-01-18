@@ -28,10 +28,10 @@ class Cetak extends BaseController
 		$defaultDate = $this->modelDate->getLatestTglInput();
 
 		// Tambahkan parameter "date" ke URL jika belum ada
-		if (empty($this->request->getGet('date'))) {
-			$url = current_url() . '?date=' . urlencode($defaultDate);
-			return redirect()->to($url);
-		}
+		// if (empty($this->request->getGet('date'))) {
+		// 	$url = current_url() . '?date=' . urlencode($defaultDate);
+		// 	return redirect()->to($url);
+		// }
 
 		$selectedDate = $this->request->getGet('date');
 		$selectedYayasan = $this->request->getGet('yayasanSelect');
