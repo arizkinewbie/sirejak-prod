@@ -37,12 +37,12 @@
 		</div>
 		<input type="password"  name="password" class="form-control login-input" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1" required>
 	</div>
-	<div class="form-check">
+	<!-- <div class="form-check">
 		<input class="form-check-input" type="checkbox" name="remember" value="1" id="rememberme">
 		<label class="form-check-label" for="rememberme" style="font-weight:normal">Remember me</label>
-	</div>
+	</div> -->
 	<div class="mb-2 mt-3">
-		<button type="submit" class="form-control btn <?=$settingAplikasi['btn_login']?>" name="submit">Login</button>
+		<button type="submit" class="form-control btn <?=$settingAplikasi['btn_login']?>" name="submit">Masuk</button>
 		<?php
 			$form_token = $auth->generateFormToken('login_form_token');
 		?>
