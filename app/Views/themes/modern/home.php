@@ -270,7 +270,7 @@ helper(['html', 'format']);
 								<div class="accordion__collapse">
 									<div class="accordion__body">
 										<p class="accordion__answer">
-											Pengguna dapat mengakses catatan telaah di telusuri di atas. Untuk lebih lengkap harus melalui menu yang tersedia setelah login ke dalam sistem.
+											Pengguna dapat mengakses catatan telaah di atas. Untuk lebih lengkap harus melalui menu yang tersedia setelah login ke dalam sistem.
 										</p>
 									</div>
 								</div>
