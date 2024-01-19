@@ -9,9 +9,7 @@ jQuery(document).ready(function() {
 
         const addSettings = {
             "buttons": [{
-                "extend": "excel",
                 "title": "Backup Data PT",
-                "text": "<i class='far fa-file-excel'></i> Excel",
                 "exportOptions": {
                     columns: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
                     modifier: { selected: null }
