@@ -14,8 +14,7 @@ helper(['html', 'format']);
 	<meta name="title" content="Sistem Rekam Jejak Perguruan Tinggi | SiReJak" />
 	<meta name="description" content="Kenalin, SiReJak. Satu data dari Si EL untuk Jakarta. Dibuat oleh Tim MSIB Batch 5 Lembaga Layanan Pendidikan Tinggi Wilayah III" />
 	<meta name="image" content="<?= $config->baseURL ?>public/images/favicon.png" />
-	<meta name="keyword" content="sirejak, rekam jejak, perguruan tinggi, kampus merdeka, merdeka belajar, lldikti 3, kemendikbudristek"
-
+	<meta name="keyword" content="sirejak, rekam jejak, perguruan tinggi, kampus merdeka, merdeka belajar, lldikti 3, kemendikbudristek">
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://sirejak.arizkinewbie.com/" />
@@ -165,9 +164,9 @@ helper(['html', 'format']);
 							</div>
 						</div>
 					</form> -->
-					<a href="<?= $config->baseURL ?>pt" class="btn btn-primary" id="submit">Telusuri</a>
+					<a href="#" class="btn btn-primary" id="submit">Telusuri</a>
 					<script>
-						document.getElementById('submit').addEventListener('click', function(e) {
+						document.getElementById('kirim').addEventListener('click', function(e) {
 							e.preventDefault();
 							Swal.fire({
 								title: 'Tahap Pengembangan',
